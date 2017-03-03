@@ -1,0 +1,11 @@
+<html>
+{% if documents %}
+			<ul>
+			{% for document in documents %}
+				<li><img src="{{ document.docfile.url }}">{{ document.docfile.name }}</li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No documents.</p>
+		{% endif %}
+</html>
